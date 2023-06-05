@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionnaireHebdo">
+
+    <TextView
+        android:id="@+id/introdoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Pour ce qui est des médicaments..."
+        app:layout_constraintBottom_toTopOf="@id/q1medoc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/q1medoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Lesquels de ces médicaments avez-vous consommés ce mois-ci?"
+        app:layout_constraintTop_toBottomOf="@id/introdoc"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerq1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/medicaments"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/q1medoc" />
+
+    <TextView
+        android:id="@+id/q2medoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:text="Combien d'antidouleurs prenez vous chaque jour (en moyenne)?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503"
+        tools:layout_editor_absoluteX="23dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/réponseq2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/q2medoc"
+        tools:layout_editor_absoluteX="23dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/q3medoc"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:text="De quels antidouleurs s'agit-il?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691"
+        tools:layout_editor_absoluteX="23dp"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerq3"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/nouvelantidouleur"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintTop_toBottomOf="@+id/q3medoc"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Page suivante"
+        android:onClick="ChangerPageDansQuestionnaireHebdo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

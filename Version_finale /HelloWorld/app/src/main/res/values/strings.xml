@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string-array name="medicaments">
+        <item>Doliprane</item>
+        <item>Iburpofène</item>
+        <item>Maxilase</item>
+    </string-array>
+
+    <string-array name="nouvelantidouleur">
+        <item>antidouleur1</item>
+        <item>antidouleur2</item>
+        <item>antidouleur3</item>
+    </string-array>
+
+    <string-array name="ortheses">
+        <item>Cheville</item>
+        <item>Genou</item>
+        <item>Hanche</item>
+        <item>Epaule</item>
+        <item>Coude</item>
+        <item>Poignet</item>
+        <item>Doigts</item>
+    </string-array>
+
+    <string-array name="OuiNon">
+        <item>Oui</item>
+        <item>Non</item>
+    </string-array>
+
+    <string-array name="TempsActivité">
+        <item>Moins de 15 mins</item>
+        <item>15 à 30 mins</item>
+        <item>30 à 45 mins</item>
+        <item>45 mins à 1h</item>
+        <item>1h15 à 1h30</item>
+        <item>1h30 à 1h45</item>
+        <item>1h45 à 2h</item>
+        <item>Plus de 2h</item>
+    </string-array>
+
+    <string-array name="Sports">
+        <item>Course à pied</item>
+        <item>Randonnée</item>
+        <item>Natation</item>
+        <item>Fitness</item>
+        <item>Tennis</item>
+        <item>Ping Pong</item>
+        <item>Football</item>
+    </string-array>
+
+</resources>

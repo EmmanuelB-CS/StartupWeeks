@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/monLayout">
+
+    <TextView
+        android:id="@+id/textViewIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenue sur votre application de suivi MyEhler-Danlos/HSD!"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="changerQuestionnaireHebdo"
+        android:text="Faisons un récap sur le mois dernier!"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewIntro"
+        app:layout_constraintBottom_toTopOf="@id/textviewscore"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="changerQuoiDeNeuf"
+        android:text="Quoi de neuf?"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintTop_toBottomOf="@id/textViewIntro"
+        app:layout_constraintBottom_toTopOf="@id/textviewscore"/>
+
+    <TextView
+        android:id="@+id/textGeneral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sinon, comment allez-vous?"
+        app:layout_constraintBottom_toTopOf="@id/sb_seekBar"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintStart_toStartOf="@id/textViewIntro"/>
+
+    <TextView
+        android:id="@+id/textviewscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niveau psychologique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textGeneral"
+        app:layout_constraintBottom_toTopOf="@id/sb_seekBar" />
+
+    <SeekBar
+        android:id="@+id/sb_seekBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:max="10"
+        android:progress="3"
+        android:progressDrawable="@drawable/seekbar_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintTop_toBottomOf="@id/textviewscore"
+        app:layout_constraintBottom_toTopOf="@id/sb_seekBarPhysique"/>
+
+    <TextView
+        android:id="@+id/textviewscorephysique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niveau physique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sb_seekBar"
+        app:layout_constraintBottom_toTopOf="@+id/sb_seekBarPhysique"/>
+
+    <SeekBar
+        android:id="@+id/sb_seekBarPhysique"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:max="10"
+        android:progress="3"
+        android:progressDrawable="@drawable/seekbar_gradient"
+        app:layout_constraintBottom_toTopOf="@id/textviewscoredouleur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textviewscorephysique"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.05" />
+
+    <TextView
+        android:id="@+id/textviewscoredouleur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Des douleurs"
+        app:layout_constraintBottom_toTopOf="@+id/sb_seekBarDouleur"
+        app:layout_constraintTop_toBottomOf="@id/sb_seekBarPhysique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sb_seekBarDouleur"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:max="10"
+        android:progress="3"
+        android:progressDrawable="@drawable/seekbar_thumbs"
+        app:layout_constraintBottom_toTopOf="@id/qpoids"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textviewscoredouleur"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.05" />
+
+    <TextView
+        android:id="@+id/qpoids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vous êtes-vous pesé(e) aujourd'hui?"
+        app:layout_constraintTop_toBottomOf="@id/sb_seekBarDouleur"
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintStart_toStartOf="@id/textViewIntro" />
+
+    <EditText
+        android:id="@+id/reponseqpoids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintStart_toEndOf="@id/qpoids"
+        app:layout_constraintTop_toBottomOf="@id/sb_seekBarDouleur" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="changerCarnetDeSante"
+        android:text="Carnet de santé"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintBottom_toTopOf="@id/button5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="changerMonTraitement"
+        android:text="Mon traitement"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintBottom_toTopOf="@id/button6"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="changerRoutines"
+        android:text="Routines"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

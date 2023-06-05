@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuoiDeNeuf"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/introdoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="D'abord, vous êtes-vous blessés?"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/qbles1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="A quel(s) endroit(s)?"
+        app:layout_constraintTop_toBottomOf="@id/introdoc" />
+
+    <Spinner
+        android:id="@+id/spinnerqbles1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/ortheses"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/qbles1"
+        app:layout_constraintStart_toStartOf="@id/qbles1"
+        app:layout_constraintTop_toBottomOf="@id/qbles1" />
+
+    <TextView
+        android:id="@+id/qbles2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Etait-ce à cause d'une activité sportive particulière?"
+        app:layout_constraintTop_toBottomOf="@id/spinnerqbles1" />
+
+    <Spinner
+        android:id="@+id/spinnerqbles2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/OuiNon"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/qbles1"
+        app:layout_constraintStart_toStartOf="@+id/qbles2"
+        app:layout_constraintTop_toBottomOf="@id/qbles2" />
+
+    <TextView
+        android:id="@+id/qbles3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Notez la douleur ressentie sur 10"
+        app:layout_constraintTop_toBottomOf="@id/spinnerqbles2" />
+
+    <SeekBar
+        android:id="@+id/sb_seekBarDouleur"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:max="10"
+        android:progress="3"
+        android:progressDrawable="@drawable/seekbar_thumbs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qbles3"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.05" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour à la Page d'accueil"
+        android:onClick="RetourALaPageDaccueil2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

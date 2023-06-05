@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TroisiemeQuestionnaireMensuel">
+
+    <TextView
+        android:id="@+id/introdoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Pour ce qui est de vos séances de kiné..."
+        app:layout_constraintBottom_toTopOf="@id/q1ortheses"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/q1kine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Combien de séances de kinésithérapie avez-vous suivies ce mois-ci?"
+        app:layout_constraintTop_toBottomOf="@id/introdoc"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/reponseq1kine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/q1kine"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/q2kine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avez-vous constaté des effets positifs après ces séances?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/q1kine"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/reponseq2kine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/q2kine"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/RetourAccueil1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour à la page d'accueil"
+        android:onClick="RetourALaPageDaccueil1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

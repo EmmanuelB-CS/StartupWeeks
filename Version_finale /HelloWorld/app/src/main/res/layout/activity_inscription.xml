@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inscription">
+
+    <TextView
+        android:id="@+id/introdoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Veuillez renseigner les informations suivantes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/qinscr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Prénom:"
+        app:layout_constraintTop_toBottomOf="@id/introdoc"
+        app:layout_constraintStart_toStartOf="@id/reponseqinscr1" />
+
+    <EditText
+        android:id="@+id/reponseqinscr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/qinscr1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/qinscr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOM:"
+        app:layout_constraintTop_toBottomOf="@id/reponseqinscr1"
+        app:layout_constraintStart_toStartOf="@id/reponseqinscr1" />
+
+    <EditText
+        android:id="@+id/reponseqinscr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/qinscr2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/qinscr3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe:"
+        app:layout_constraintTop_toBottomOf="@id/reponseqinscr2"
+        app:layout_constraintStart_toStartOf="@id/reponseqinscr1" />
+
+    <EditText
+        android:id="@+id/reponseqinscr3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qinscr3" />
+
+    <TextView
+        android:id="@+id/qinscr4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmer le mot de passe:"
+        app:layout_constraintTop_toBottomOf="@id/reponseqinscr3"
+        app:layout_constraintStart_toStartOf="@id/reponseqinscr1" />
+
+    <EditText
+        android:id="@+id/reponseqinscr4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qinscr4" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connexion"
+        android:onClick="ChangerPageConnexion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="671dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

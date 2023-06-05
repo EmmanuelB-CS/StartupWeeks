@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CycleMenstruel">
+
+    <TextView
+        android:id="@+id/introdoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Vous avez-vos règles?"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/qcyclemenstruel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Depuis quand avez-vous vos règles?"
+        app:layout_constraintTop_toBottomOf="@id/introdoc"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CalendarView
+        android:id="@+id/periodsCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/qcyclemenstruel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textviewscoreintensitemenstuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intensité"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/periodsCalendar"/>
+
+    <SeekBar
+        android:id="@+id/sb_seekBarIntensite"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:max="10"
+        android:progress="3"
+        android:progressDrawable="@drawable/seekbar_thumbs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintTop_toBottomOf="@id/textviewscoreintensitemenstuel" />
+
+    <TextView
+        android:id="@+id/textviewscoredouleurmenstruel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Douleur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sb_seekBarIntensite"/>
+
+    <SeekBar
+        android:id="@+id/sb_seekBarDouleur"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:max="10"
+        android:progress="3"
+        android:progressDrawable="@drawable/seekbar_thumbs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintTop_toBottomOf="@id/textviewscoredouleurmenstruel" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour à la Page d'accueil"
+        android:onClick="RetourALaPageDaccueil7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
